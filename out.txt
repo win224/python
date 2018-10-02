@@ -1,0 +1,19 @@
+Beautiful Is Better Than Ugly.
+Explicit Is Better Than Implicit.
+Simple Is Better Than Complex.
+Complex Is Better Than Complicated.
+Flat Is Better Than Nested.
+Sparse Is Better Than Dense.
+Readability Counts.
+Special Cases Aren't Special Enough To Break The Rules.
+Although Practicality Beats Purity.
+Errors Should Never Pass Silently.
+Unless Explicitly Silenced.
+In The Face Of Ambiguity, Refuse The Temptation To Guess.
+There Should Be One-- And Preferably Only One --obvious Way To Do It.
+Although That Way May Not Be Obvious At First Unless You're Dutch.
+Now Is Better Than Never.
+Although Never Is Often Better Than *right* Now.
+If The Implementation Is Hard To Explain, It's A Bad Idea.
+If The Implementation Is Easy To Explain, It May Be A Good Idea.
+Namespaces Are One Honking Great Idea -- Let's Do More Of Those!
