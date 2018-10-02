@@ -1,0 +1,94 @@
+Python Linux系统管理自动化运维
+
+2.7 Pyenv管理不同python版本
+    git clone https://github.com/yyuu/pyenv.git ~/.pyenv
+    source ~/.bash_profile #source安装文件
+    pyenv install --list
+    pyenv uninstall/install -v 3.6.0
+    pyenv global 3.6.0/2.7.13  切换python版本
+
+3.1.1 使用sys.argv获取命令行参数
+    from _future_ import print_function
+    import sys
+
+    print(sys.argv)
+3.1.2 使用sys.stdin和fileput读取标准输入
+    #！/usr/bin/python
+    from _future_ import print_function
+    import fileinput
+
+    for line in fileinput.input():
+        print(line,end="")
+
+python logging
+    #! /usr/local/bin/python
+    # -*- coding:utf-8 -*-
+    import logging
+    loging.basicConfig(filename='app.log', level=logging.INFO, format='%(asctime)s:%(levelname)s:%(message)s')
+
+    logging.debug('debug message')
+    logging.info('info message')
+    logging.warn('warn message')
+    logging.error('error message')
+    logging.critical('critical message')
+
+
+fc
+Click 和python标准库argparse相同
+
+
+4 文本处理：
+    4.1 字符串常量
+    ''
+    ""
+    ''' '''
+    \n
+    \r
+    import os
+    path = r"c:\next"
+    print(path)
+    4.2.1 正则表达式
+        re
+5 系统管理
+    5.1 文件读写
+    open 'r' 读 ‘w' 写 'x'创建一个新文件 ‘a'在文件末尾追加
+    f = open ('data.txt', 'w')
+    f.write('hello,world')
+    f.close()
+
+    read: 读取文件所有内容
+    readline: 一次读取一行
+    readlines: 将文件内容存入列表中，列表的每一行对应文中的一行
+    write: 写字符串到文件中，并返回写入的字符数
+    writelines: 写入一个字符串列表到文件中
+     案例：将文件所有单词首字母变成大写
+     from __future__ import print_function
+     with open('data.txt') as inf, open('out.txt','w') as outf:
+        for line in inf:
+            print(*[word.capitalize() for word in line.split()], file=outf)
+
+
+    5.2 文件及文件路径管理
+    os.patch
+    os.getcwd()
+    os.listdir()
+        split：返回一个二元组，包含文件的路径和文件名
+        dirname:返回文件的路径
+        basename:返回文件的文件名
+        splitext：返回一个去除文件扩展名部分和扩展名的二元组
+    import os
+    path = "/home/lmx/t/access.log"
+    os.patch.split(path)
+    ('/home/lmx/t', 'access.log')
+    os.path.dirname(path)
+    '/home/lmx/t'
+    os.path.basename(path)
+    'access.log'
+    os.path.splitext
+    ('/home/lmx/t/access', '.log')
+        构建路径
+        expanduser： 展开用户的home目录， 如~
+        abspath: 得到文件或者路径的绝对路径
+        join: 使不同路径分隔符拼接路径
+
+    3 获取文件属性
