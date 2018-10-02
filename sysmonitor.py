@@ -22,3 +22,7 @@ def render(tpl_path, **kwargs):
 def bytes2human(n):
     symbols = ('K', 'M', 'G', 'T', 'P', 'E', 'Z', 'Y')
     prefix = {}
+
+
+
+#https://github.com/Toskajin/python_for_linux_system_administration/blob/master/chapter6/section3/monitor.py
